@@ -1,15 +1,29 @@
-import Footer from "../ExchangeRates/components/Footer/Footer";
-import Header from "../ExchangeRates/components/Header/Header";
-import SideBar from "../ExchangeRates/components/SideBar/SideBar";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
+import SideBar from "../components/SideBar/SideBar";
+import { Box } from "@mui/material";
 
 function MainLayout(props) {
   return (
-    <div>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Header />
-      <SideBar />
-      {props.children}
-      <Footer />
-    </div>
+      <Box sx={{ mt: "74px", display: "flex" }}>
+        <SideBar />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            flexGrow: 1,
+          }}
+        >
+          <main style={{ background: "#E9ECEF" }}>{props.children}</main>
+
+          <Box sx={{ marginLeft: "257px" }}>
+            <Footer />
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 export default MainLayout;

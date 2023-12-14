@@ -6,6 +6,7 @@ import {
   Box,
   TextField,
   InputAdornment,
+  useTheme,
 } from "@mui/material";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -15,10 +16,15 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Header() {
+  const theme = useTheme();
   return (
-    <AppBar color="inherit" elevation={1}>
+    <AppBar
+      color="inherit"
+      elevation={1}
+      sx={{ zIndex: theme.zIndex.drawer + 1 }}
+    >
       <Toolbar
-        sx={{ py: "20px", display: "flex", justifyContent: "space-between" }}
+        sx={{ py: "5px", display: "flex", justifyContent: "space-between" }}
       >
         <Box
           sx={{
