@@ -55,7 +55,13 @@ function SalesChart() {
     },
   ];
   return (
-    <Box sx={{ flexBasis: "70%", display: "flex", flexDirection: "column" }}>
+    <Box
+      sx={{
+        flexBasis: "70%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <ResponsiveContainer
         width="100%"
         height={450}
@@ -63,12 +69,17 @@ function SalesChart() {
       >
         <div
           style={{
-            padding: "15px",
+            padding: "24px",
             display: "flex",
             justifyContent: "space-between",
           }}
         >
-          <Box></Box>
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <Typography>$855.8K</Typography>
+            <Typography sx={{ color: "#8A92A6", fontWeight: "400" }}>
+              Gross Sales
+            </Typography>
+          </Box>
           <Box sx={{ display: "flex" }}>
             <Box sx={{ display: "flex" }}>
               <CircleIcon sx={{ color: "#3A57E8" }} />
