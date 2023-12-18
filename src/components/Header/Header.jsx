@@ -18,10 +18,12 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const theme = useTheme();
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -89,7 +91,7 @@ function Header() {
           <IconButton>
             <MailIcon />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={() => navigate("/sign-in")}>
             <AccountCircleIcon />
           </IconButton>
         </Box>

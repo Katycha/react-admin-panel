@@ -7,18 +7,25 @@ import Clients from "../../components/Clients";
 import Overview from "../../components/Overview";
 import Earnings from "../../components/Earnings";
 import Conversions from "../../components/Conversions";
+import Enterprise from "../../components/Enterprise";
 
 function Dashboard() {
   return (
     <Box>
       <Hello />
-      <Box sx={{ display: "flex", mt: "100px", columnGap: "40px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          mt: "100px",
+          columnGap: "40px",
+          flexBasis: "70%",
+        }}
+      >
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
-            rowGap: "120px",
-            width: "70%",
+            rowGap: "40px",
             height: "450px",
           }}
         >
@@ -27,6 +34,7 @@ function Dashboard() {
             <Earnings />
             <Conversions />
           </Box>
+          <Enterprise />
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", rowGap: "40px" }}>
           <Box sx={{ display: "flex", flexDirection: "column" }}>

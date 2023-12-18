@@ -41,7 +41,9 @@ function Earnings() {
               <CircleIcon sx={{ color: "#3A57E8" }} />
             </Box>
             <Box>
-              <Typography>Fashion</Typography>
+              <Typography sx={{ color: "#8A92A6", fontWeight: "400" }}>
+                Fashion
+              </Typography>
               <Typography>251K</Typography>
             </Box>
           </Box>
@@ -51,7 +53,9 @@ function Earnings() {
               <CircleIcon sx={{ color: "#85F4FA" }} />
             </Box>
             <Box>
-              <Typography>Accessories</Typography>
+              <Typography sx={{ color: "#8A92A6", fontWeight: "400" }}>
+                Accessories
+              </Typography>
               <Typography>171K</Typography>
             </Box>
           </Box>

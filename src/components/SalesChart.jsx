@@ -57,14 +57,14 @@ function SalesChart() {
   return (
     <Box
       sx={{
-        flexBasis: "70%",
         display: "flex",
         flexDirection: "column",
+        height: "450px",
       }}
     >
       <ResponsiveContainer
         width="100%"
-        height={450}
+        height="80%"
         style={{ background: "white", borderRadius: "15px" }}
       >
         <div
@@ -99,7 +99,7 @@ function SalesChart() {
 
         <AreaChart
           width={500}
-          height={400}
+          height="80%"
           data={data}
           margin={{ top: 10, right: 30, bottom: 0, left: 0 }}
         >
